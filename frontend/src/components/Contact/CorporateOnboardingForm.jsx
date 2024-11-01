@@ -1,5 +1,6 @@
 import React from "react";
 import useInputFocusEffect from "./Formfunction";
+import styles from "./Forms.module.css";
 
 const CorporateOnboardingForm = () => {
     useInputFocusEffect();

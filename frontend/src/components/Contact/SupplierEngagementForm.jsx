@@ -1,11 +1,12 @@
 import React from "react";
 import useInputFocusEffect from "./Formfunction";
+import styles from "./Forms.module.css";
 
 const SupplierEngagementForm = () => {
-  useInputFocusEffect();
+  const inputsRef = useInputFocusEffect();
 
   return (
-    <>
+    <div>
       <div className={styles.inputContainer}>
         <input type="text" className={styles.input} required />
         <label>Supplier Name</label>
@@ -22,9 +23,8 @@ const SupplierEngagementForm = () => {
         <span>Engagement Details</span>
       </div>
       <button className={styles.btn2}>Submit</button>
-    </>
+    </div>
   );
 };
 
 export default SupplierEngagementForm;
-
