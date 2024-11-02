@@ -1,28 +1,28 @@
 import React from "react";
 import useInputFocusEffect from "./Formfunction";
-import styles from "./Forms.module.css";
+import contactStyles from "./Forms.module.css";
 
 const SupplierEngagementForm = () => {
-  const inputsRef = useInputFocusEffect();
+  useInputFocusEffect();
 
   return (
     <div>
-      <div className={styles.inputContainer}>
-        <input type="text" className={styles.input} required />
+      <div className={contactStyles.inputContainer}>
+        <input type="text" className={contactStyles.input} required />
         <label>Supplier Name</label>
         <span>Supplier Name</span>
       </div>
-      <div className={styles.inputContainer}>
-        <input type="text" className={styles.input} required />
+      <div className={contactStyles.inputContainer}>
+        <input type="text" className={contactStyles.input} required />
         <label>Supplier ID</label>
         <span>Supplier ID</span>
       </div>
-      <div className={`${styles.inputContainer} ${styles.textarea}`}>
-        <textarea className={styles.input} required></textarea>
+      <div className={`${contactStyles.inputContainer} ${contactStyles.textarea}`}>
+        <textarea className={contactStyles.input} required></textarea>
         <label>Engagement Details</label>
         <span>Engagement Details</span>
       </div>
-      <button className={styles.btn2}>Submit</button>
+      <button className={contactStyles.btn2}>Submit</button>
     </div>
   );
 };

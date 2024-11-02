@@ -3,7 +3,7 @@ import SupplierEngagementForm from "./SupplierEngagementForm";
 import CorporateOnboardingForm from "./CorporateOnboardingForm";
 import FeedbackForm from "./FeedbackForm";
 import ContactInfo from "./ContactInfo";
-import styles from "./Forms.module.css"; // Ensure Forms.module.css is correctly imported
+import contactStyles from "./Forms.module.css"; // Ensure Forms.module.css is correctly imported
 
 const MainForm = () => {
   const [formType, setFormType] = useState("");
@@ -22,19 +22,19 @@ const MainForm = () => {
   };
 
   return (
-    <div className={styles.container2}>
-      <div className={styles.form2}>
+    <div className={contactStyles.container2}>
+      <div className={contactStyles.form2}>
         <ContactInfo />
-        <div className={styles.contactForm}>
-          <span className={styles.circleOne}></span>
-          <span className={styles.circleTwo}></span>
-          <div className={styles.myForm}>
-            <h3 className={styles.title}>Contact Us</h3>
-            <div className={styles.inputContainer}>
+        <div className={contactStyles.contactForm}>
+          <span className={contactStyles.circleOne}></span>
+          <span className={contactStyles.circleTwo}></span>
+          <div className={contactStyles.myForm}>
+            <h3 className={contactStyles.formTitle}>Contact Us</h3>
+            <div className={contactStyles.inputContainer}>
               <label htmlFor="form-select">Select Form Type</label>
               <select
                 id="form-select"
-                className={styles.input}
+                className={contactStyles.input}
                 value={formType}
                 onChange={(e) => setFormType(e.target.value)}
               >

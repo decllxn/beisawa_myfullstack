@@ -42,7 +42,7 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.contact-form {
+.contactForm {
   background-color: #006633;
   position: relative;
 }
@@ -53,21 +53,21 @@ textarea {
   position: absolute;
 }
 
-.circle.one {
+.circleOne {
   width: 130px;
   height: 130px;
   top: 130px;
   right: -40px;
 }
 
-.circle.two {
+.circleTwo {
   width: 80px;
   height: 80px;
   top: 10px;
   right: 30px;
 }
 
-.contact-form:before {
+.contactForm:before {
   content: "";
   position: absolute;
   width: 26px;
@@ -85,7 +85,7 @@ textarea {
   position: relative;
 }
 
-.title {
+.formTitle {
   color: #fff;
   font-weight: 500;
   font-size: 1.5rem;
@@ -93,7 +93,7 @@ textarea {
   margin-bottom: 0.7rem;
 }
 
-.input-container {
+.inputContainer {
   position: relative;
   margin: 1rem 0;
   width: 100%;
@@ -138,7 +138,7 @@ textarea.input {
   overflow-y: auto;
 }
 
-.input-container label {
+.inputContainer label {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -152,7 +152,7 @@ textarea.input {
   transition: 0.5s;
 }
 
-.input-container.textarea label {
+.inputContainer.textarea label {
   top: 1rem;
   transform: translateY(0);
 }
@@ -176,7 +176,7 @@ textarea.input {
   color: #fff;
 }
 
-.input-container span {
+.inputContainer span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -188,8 +188,8 @@ textarea.input {
   z-index: 500;
 }
 
-.input-container span:before,
-.input-container span:after {
+.inputContainer span:before,
+.inputContainer span:after {
   content: "";
   position: absolute;
   width: 10%;
@@ -201,33 +201,33 @@ textarea.input {
   transform: translateY(-50%);
 }
 
-.input-container span:before {
+.inputContainer span:before {
   left: 50%;
 }
 
-.input-container span:after {
+.inputContainer span:after {
   right: 50%;
 }
 
-.input-container.focus label {
+.inputContainer.focus label {
   top: 0;
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
 }
 
-.input-container.focus span:before,
-.input-container.focus span:after {
+.inputContainer.focus span:before,
+.inputContainer.focus span:after {
   width: 50%;
   opacity: 1;
 }
 
-.contact-info {
+.contactInfo {
   padding: 2.3rem 2.2rem;
   position: relative;
 }
 
-.contact-info .title {
+.contactInfo .title {
   color: #006633;
 }
 
@@ -257,12 +257,12 @@ textarea.input {
   color: #333;
 }
 
-.social-icons {
+.contactSocialIcons {
   display: flex;
   margin-top: 0.5rem;
 }
 
-.social-icons a {
+.contactSocialIcons a {
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -274,11 +274,11 @@ textarea.input {
   transition: 0.3s;
 }
 
-.social-icons a:hover {
+.contactSocialIcons a:hover {
   transform: scale(1.05);
 }
 
-.contact-info:before {
+.contactInfo:before {
   content: "";
   position: absolute;
   width: 110px;
@@ -289,7 +289,7 @@ textarea.input {
   right: 50px;
 }
 
-.big-circle {
+.bigCircle {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -300,7 +300,7 @@ textarea.input {
   transform: translate(-40%, 38%);
 }
 
-.big-circle:after {
+.bigCircle:after {
   content: "";
   position: absolute;
   width: 360px;
@@ -329,14 +329,14 @@ textarea.input {
     grid-template-columns: 1fr;
   }
 
-  .contact-info:before {
+  .contactInfo:before {
     bottom: initial;
     top: -75px;
     right: 65px;
     transform: scale(0.95);
   }
 
-  .contact-form:before {
+  .contactForm:before {
     top: -13px;
     left: initial;
     right: 70px;
@@ -347,7 +347,7 @@ textarea.input {
     height: 350px;
   }
 
-  .big-circle {
+  .bigCircle {
     bottom: 75%;
     transform: scale(0.9) translate(-40%, 30%);
     right: 50%;
@@ -368,7 +368,7 @@ textarea.input {
     padding: 1.5rem;
   }
 
-  .contact-info:before {
+  .contactInfo:before {
     display: none;
   }
 
@@ -378,7 +378,7 @@ textarea.input {
   }
 
   form2,
-  .contact-info {
+  .contactInfo {
     padding: 1.7rem 1.6rem;
   }
 
@@ -392,7 +392,7 @@ textarea.input {
     font-size: 1.15rem;
   }
 
-  .social-icons a {
+  .contactSocialIcons a {
     width: 30px;
     height: 30px;
     line-height: 30px;
