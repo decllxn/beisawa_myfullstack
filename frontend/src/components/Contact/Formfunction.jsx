@@ -7,24 +7,21 @@ const useInputFocusEffect = () => {
   useEffect(() => {
     const inputs = inputsRef.current;
 
-    function focusFunc(event) {
-      let parent = event.target.parentNode;
-      parent.classList.add("focus");
-    }
+    const focusFunc = (event) => {
+      event.target.parentNode.classList.add(styles.focus);
+    };
 
-    function blurFunc(event) {
-      let parent = event.target.parentNode;
+    const blurFunc = (event) => {
       if (event.target.value === "") {
-        parent.classList.remove("focus");
+        event.target.parentNode.classList.remove(styles.focus);
       }
-    }
+    };
 
     inputs.forEach((input) => {
       input.addEventListener("focus", focusFunc);
       input.addEventListener("blur", blurFunc);
     });
 
-    // Cleanup event listeners on unmount
     return () => {
       inputs.forEach((input) => {
         input.removeEventListener("focus", focusFunc);

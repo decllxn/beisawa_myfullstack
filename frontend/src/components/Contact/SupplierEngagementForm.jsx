@@ -3,22 +3,36 @@ import useInputFocusEffect from "./Formfunction";
 import contactStyles from "./Forms.module.css";
 
 const SupplierEngagementForm = () => {
-  useInputFocusEffect();
+  const inputsRef = useInputFocusEffect(); // Use the hook to get the ref
 
   return (
     <div>
       <div className={contactStyles.inputContainer}>
-        <input type="text" className={contactStyles.input} required />
+        <input
+          type="text"
+          ref={(el) => (inputsRef.current[0] = el)} // Attach ref to each input
+          className={contactStyles.input}
+          required
+        />
         <label>Supplier Name</label>
         <span>Supplier Name</span>
       </div>
       <div className={contactStyles.inputContainer}>
-        <input type="text" className={contactStyles.input} required />
+        <input
+          type="text"
+          ref={(el) => (inputsRef.current[1] = el)}
+          className={contactStyles.input}
+          required
+        />
         <label>Supplier ID</label>
         <span>Supplier ID</span>
       </div>
       <div className={`${contactStyles.inputContainer} ${contactStyles.textarea}`}>
-        <textarea className={contactStyles.input} required></textarea>
+        <textarea
+          ref={(el) => (inputsRef.current[2] = el)}
+          className={contactStyles.input}
+          required
+        ></textarea>
         <label>Engagement Details</label>
         <span>Engagement Details</span>
       </div>
