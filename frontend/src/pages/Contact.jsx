@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import ContactFormContainer from './components/ContactFormContainer';
+import ContactFormContainer from '../components/Contact/ContactFormContainer';
 
 
 const ContactPage = () => {

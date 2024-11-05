@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Forms.modules.css"; // Assume this CSS module handles styles for all forms
+import styles from "./Forms.module.css"; // Assume this CSS module handles styles for all forms
 
 const SupplierEngagement = () => {
   // Handle focus effect for the input fields
