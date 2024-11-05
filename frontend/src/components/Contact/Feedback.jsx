@@ -31,18 +31,23 @@ const Feedback = () => {
     <>
       <div className="input-container">
         <input type="text" name="name" className="input" />
-        <label htmlFor="name">Company name</label>
-        <span>Company name</span>
+        <label htmlFor="name">Name/Company name</label>
+        <span>Name/Company name</span>
       </div>
       <div className="input-container">
         <input type="email" name="email" className="input" />
         <label htmlFor="email">Email</label>
         <span>Email</span>
       </div>
+      <div className="input-container">
+        <input type="tel" name="phone" className="input" />
+        <label htmlFor="phone">Phone</label>
+        <span>Phone</span>
+      </div>
       <div className="input-container textarea">
         <textarea name="message" className="input"></textarea>
-        <label htmlFor="message">Details</label>
-        <span>Details</span>
+        <label htmlFor="message">Message</label>
+        <span>Message</span>
       </div>
     </>
   );

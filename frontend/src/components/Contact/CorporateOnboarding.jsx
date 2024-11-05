@@ -39,10 +39,15 @@ const Feedback = () => {
         <label htmlFor="email">Email</label>
         <span>Email</span>
       </div>
+      <div className="input-container">
+        <input type="tel" name="phone" className="input" />
+        <label htmlFor="phone">Phone</label>
+        <span>Phone</span>
+      </div>
       <div className="input-container textarea">
         <textarea name="message" className="input"></textarea>
-        <label htmlFor="message">Details</label>
-        <span>Details</span>
+        <label htmlFor="message">Onboarding Details</label>
+        <span>Onboarding Details</span>
       </div>
     </>
   );

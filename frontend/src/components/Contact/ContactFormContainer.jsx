@@ -1,35 +1,57 @@
-// src/components/ContactFormContainer.jsx
 import React, { useState } from "react";
-import CorporateOnboardingForm from "./CorporateOnboardingForm";
-import FeedbackForm from "./FeedbackForm";
 import SupplierEngagement from "./SupplierEngagement";
+import CorporateOnboarding from "./CorporateOnboarding";
+import Feedback from "./Feedback";
 import ContactInfo from "./ContactInfo";
-import styles from "./Forms.module.css";
+import "./contact.css";
 
 const ContactFormContainer = () => {
   const [selectedForm, setSelectedForm] = useState("feedback");
 
+  const handleFormChange = (e) => {
+    setSelectedForm(e.target.value);
+  };
+
   const renderForm = () => {
     switch (selectedForm) {
-      case "corporate":
-        return <CorporateOnboardingForm />;
       case "supplier":
         return <SupplierEngagement />;
+      case "corporate":
+        return <CorporateOnboarding />;
+      case "feedback":
       default:
-        return <FeedbackForm />;
+        return <Feedback />;
     }
   };
 
   return (
-    <div className={styles.container2}>
-      <ContactInfo />
-      <div className={styles.form2}>
-        <div className={styles.formSelector}>
-          <button onClick={() => setSelectedForm("feedback")}>Feedback Form</button>
-          <button onClick={() => setSelectedForm("corporate")}>Corporate Onboarding</button>
-          <button onClick={() => setSelectedForm("supplier")}>Supplier Engagement</button>
+    <div className="container">
+      <img src="img/shape.png" className="square" alt="" />
+      <div className="form">
+        <ContactInfo />
+        <div className="contact-form">
+          <span className="circle one"></span>
+          <span className="circle two"></span>
+          <form autoComplete="off">
+            <h3 className="title">Contact Us</h3>
+            {/* Dropdown to select form */}
+            <div className="input-container">
+              <select
+                className="input"
+                value={selectedForm}
+                onChange={handleFormChange}
+              >
+                <option value="supplier">Supplier Engagement</option>
+                <option value="corporate">Corporate Onboarding</option>
+                <option value="feedback">Feedback</option>
+              </select>
+              <span>Select Form</span>
+            </div>
+            {/* Render selected form */}
+            {renderForm()}
+            <input type="submit" value="Send" className="btn" />
+          </form>
         </div>
-        {renderForm()}
       </div>
     </div>
   );

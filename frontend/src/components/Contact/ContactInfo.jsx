@@ -1,32 +1,36 @@
-// src/components/ContactInfo.jsx
 import React from "react";
-import styles from "./Forms.module.css";
+import logo from "./logo2.jpeg";
 
-const ContactInfo = () => {
-  return (
-    <div className={styles.contactInfo}>
-      <img src="../assets/logo2.jpeg" alt="company-logo" className={styles.logo} />
-      <h3 className={styles.title}>Let's get in touch</h3>
-      <p className={styles.text}>
-        Are you a customer? Supplier? Corporate customer? Your feedback helps us serve you better!
-        We value your insights and invite you to share your thoughts on how we can enhance our partnership.
-      </p>
-      <div className={styles.info}>
-        <div className={styles.information}>
+const ContactInfo = () => (
+  <div className="contact-info">
+    <img src={logo} alt="company-logo" className="logo" />
+    <h3 className="title">Let's get in touch</h3>
+    <p className="text">
+      Are you a customer? Supplier? Corporate customer? Your feedback helps us serve you better!
+      We value your insights and invite you to share your thoughts on how we can enhance our partnership.
+    </p>
+
+    <div className="info">
+      <div className="information">
+        <div className="icon">
           <i className="ri-map-pin-2-line"></i>
-          <p>Meru, Kenya</p>
         </div>
-        <div className={styles.information}>
+        <p>Meru, Kenya</p>
+      </div>
+      <div className="information">
+        <div className="icon">
           <i className="ri-mail-line"></i>
-          <p>beisawa@gmail.com</p>
         </div>
-        <div className={styles.information}>
+        <p>beisawa@gmail.com</p>
+      </div>
+      <div className="information">
+        <div className="icon">
           <i className="ri-phone-line"></i>
-          <p>0712345678</p>
         </div>
+        <p>0712345678</p>
       </div>
     </div>
-  );
-};
+  </div>
+);
 
 export default ContactInfo;

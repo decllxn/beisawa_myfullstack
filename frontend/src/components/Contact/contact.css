@@ -12,7 +12,7 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 
-.container2 {
+.container {
   position: relative;
   width: 100%;
   min-height: 100vh;
@@ -29,7 +29,7 @@ textarea {
 }
 
 
-.form2 {
+.form {
   width: 100%;
   max-width: 820px;
   background-color: #fff;
@@ -41,7 +41,7 @@ textarea {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.contactForm {
+.contact-form {
   background-color: #006633;
   position: relative;
 }
@@ -66,7 +66,7 @@ textarea {
   right: 30px;
 }
 
-.contactForm:before {
+.contact-form:before {
   content: "";
   position: absolute;
   width: 26px;
@@ -76,7 +76,8 @@ textarea {
   top: 50px;
   left: -13px;
 }
-Form.contactForm {
+
+form {
   padding: 2.3rem 2.2rem;
   z-index: 10;
   overflow: hidden;
@@ -91,7 +92,7 @@ Form.contactForm {
   margin-bottom: 0.7rem;
 }
 
-.inputContainer {
+.input-container {
   position: relative;
   margin: 1rem 0;
 }
@@ -118,7 +119,7 @@ textarea.input {
   overflow-y: auto;
 }
 
-.inputContainer label {
+.input-container label {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -132,12 +133,12 @@ textarea.input {
   transition: 0.5s;
 }
 
-.inputContainer.textarea label {
+.input-container.textarea label {
   top: 1rem;
   transform: translateY(0);
 }
 
-.btn2 {
+.btn {
   padding: 0.6rem 1.3rem;
   background-color: #fff;
   border: 2px solid #fafafa;
@@ -151,12 +152,12 @@ textarea.input {
   margin: 0;
 }
 
-.btn2:hover {
+.btn:hover {
   background-color: transparent;
   color: #fff;
 }
 
-.inputContainer span {
+.input-container span {
   position: absolute;
   top: 0;
   left: 25px;
@@ -168,8 +169,8 @@ textarea.input {
   z-index: 500;
 }
 
-.inputContainer span:before,
-.inputContainer span:after {
+.input-container span:before,
+.input-container span:after {
   content: "";
   position: absolute;
   width: 10%;
@@ -181,33 +182,33 @@ textarea.input {
   transform: translateY(-50%);
 }
 
-.inputContainer span:before {
+.input-container span:before {
   left: 50%;
 }
 
-.inputContainer span:after {
+.input-container span:after {
   right: 50%;
 }
 
-.inputContainer.focus label {
+.input-container.focus label {
   top: 0;
   transform: translateY(-50%);
   left: 25px;
   font-size: 0.8rem;
 }
 
-.inputContainer.focus span:before,
-.inputContainer.focus span:after {
+.input-container.focus span:before,
+.input-container.focus span:after {
   width: 50%;
   opacity: 1;
 }
 
-.contactInfo {
+.contact-info {
   padding: 2.3rem 2.2rem;
   position: relative;
 }
 
-.contactInfo .title {
+.contact-info .title {
   color: #006633;
 }
 
@@ -258,7 +259,7 @@ textarea.input {
   transform: scale(1.05);
 }
 
-.contactInfo:before {
+.contact-info:before {
   content: "";
   position: absolute;
   width: 110px;
@@ -301,18 +302,18 @@ textarea.input {
 }
 
 @media (max-width: 850px) {
-  Form.contactForm {
+  .form {
     grid-template-columns: 1fr;
   }
 
-  .contactInfo:before {
+  .contact-info:before {
     bottom: initial;
     top: -75px;
     right: 65px;
     transform: scale(0.95);
   }
 
-  .contactForm:before {
+  .contact-form:before {
     top: -13px;
     left: initial;
     right: 70px;
@@ -339,11 +340,11 @@ textarea.input {
 }
 
 @media (max-width: 480px) {
-  Container {
+  .container {
     padding: 1.5rem;
   }
 
-  .contactInfo:before {
+  .contact-info:before {
     display: none;
   }
 
@@ -352,8 +353,8 @@ textarea.input {
     display: none;
   }
 
-Form.contactForm,
-  .contactInfo {
+  form,
+  .contact-info {
     padding: 1.7rem 1.6rem;
   }
 
@@ -381,7 +382,7 @@ Form.contactForm,
     padding: 0.45rem 1.2rem;
   }
 
-  .btn2 {
+  .btn {
     padding: 0.45rem 1.2rem;
   }
 }
