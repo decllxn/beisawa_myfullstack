@@ -22,7 +22,6 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: -100;
 }
 
 .logo {
@@ -53,14 +52,14 @@ textarea {
   position: absolute;
 }
 
-.circleOne {
+.circle.one {
   width: 130px;
   height: 130px;
   top: 130px;
   right: -40px;
 }
 
-.circleTwo {
+.circle.two {
   width: 80px;
   height: 80px;
   top: 10px;
@@ -72,20 +71,19 @@ textarea {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-color: #c9be88;
+  background-color: #1abc9c;
   transform: rotate(45deg);
   top: 50px;
   left: -13px;
 }
-
-.myForm {
+Form.contactForm {
   padding: 2.3rem 2.2rem;
   z-index: 10;
   overflow: hidden;
   position: relative;
 }
 
-.formTitle {
+.title {
   color: #fff;
   font-weight: 500;
   font-size: 1.5rem;
@@ -96,25 +94,7 @@ textarea {
 .inputContainer {
   position: relative;
   margin: 1rem 0;
-  width: 100%;
 }
-
-#form-select {
-  width: 100%;
-}
-
-select {
-  background-color: #006633;
-  color: #fff;
-  border: 2px solid #006633;
-  padding: 0.5rem;
-  border-radius: 3%;
-}
-
-option {
-  background-color: #006633;
-}
-
 
 .input {
   width: 100%;
@@ -257,12 +237,12 @@ textarea.input {
   color: #333;
 }
 
-.contactSocialIcons {
+.social-icons {
   display: flex;
   margin-top: 0.5rem;
 }
 
-.contactSocialIcons a {
+.social-icons a {
   width: 35px;
   height: 35px;
   border-radius: 5px;
@@ -274,7 +254,7 @@ textarea.input {
   transition: 0.3s;
 }
 
-.contactSocialIcons a:hover {
+.social-icons a:hover {
   transform: scale(1.05);
 }
 
@@ -283,13 +263,13 @@ textarea.input {
   position: absolute;
   width: 110px;
   height: 100px;
-  border: 22px solid #c9be88;
+  border: 22px solid #C9BE88;
   border-radius: 50%;
   bottom: -77px;
   right: 50px;
 }
 
-.bigCircle {
+.big-circle {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -300,7 +280,7 @@ textarea.input {
   transform: translate(-40%, 38%);
 }
 
-.bigCircle:after {
+.big-circle:after {
   content: "";
   position: absolute;
   width: 360px;
@@ -321,11 +301,7 @@ textarea.input {
 }
 
 @media (max-width: 850px) {
-  .container2 {
-    margin-top: 10%;
-  }
-
-  .form2 {
+  Form.contactForm {
     grid-template-columns: 1fr;
   }
 
@@ -347,7 +323,7 @@ textarea.input {
     height: 350px;
   }
 
-  .bigCircle {
+  .big-circle {
     bottom: 75%;
     transform: scale(0.9) translate(-40%, 30%);
     right: 50%;
@@ -363,8 +339,7 @@ textarea.input {
 }
 
 @media (max-width: 480px) {
-  .container2 {
-    margin-top: 15%;
+  Container {
     padding: 1.5rem;
   }
 
@@ -377,7 +352,7 @@ textarea.input {
     display: none;
   }
 
-  form2,
+Form.contactForm,
   .contactInfo {
     padding: 1.7rem 1.6rem;
   }
@@ -392,7 +367,7 @@ textarea.input {
     font-size: 1.15rem;
   }
 
-  .contactSocialIcons a {
+  .social-icons a {
     width: 30px;
     height: 30px;
     line-height: 30px;

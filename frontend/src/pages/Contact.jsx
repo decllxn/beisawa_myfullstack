@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import MainForm from '../components/Contact/MainForm';
-import Footer from '../components/Footer/Footer';
+import ContactFormContainer from './components/ContactFormContainer';
+
 
 const ContactPage = () => {
     return (
         <>
           <Navbar />
-          <MainForm />
+          <ContactFormContainer />
         </>
     );
 }

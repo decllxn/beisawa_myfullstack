@@ -1,44 +1,101 @@
 import React from "react";
-import useInputFocusEffect from "./Formfunction";
-import contactStyles from "./Forms.module.css";
+import styles from "./Forms.modules.css"; // Assume this CSS module handles styles for all forms
 
-const SupplierEngagementForm = () => {
-  const inputsRef = useInputFocusEffect(); // Use the hook to get the ref
+const SupplierEngagement = () => {
+  // Handle focus effect for the input fields
+  const handleFocus = (e) => {
+    e.target.parentNode.classList.add(styles.focus);
+  };
+
+  const handleBlur = (e) => {
+    if (e.target.value === "") {
+      e.target.parentNode.classList.remove(styles.focus);
+    }
+  };
 
   return (
-    <div>
-      <div className={contactStyles.inputContainer}>
-        <input
-          type="text"
-          ref={(el) => (inputsRef.current[0] = el)} // Attach ref to each input
-          className={contactStyles.input}
-          required
-        />
-        <label>Supplier Name</label>
-        <span>Supplier Name</span>
+    <div className={styles.container}>
+      <div className={styles.contactForm}>
+        <span className={`${styles.circle} ${styles.one}`}></span>
+        <span className={`${styles.circle} ${styles.two}`}></span>
+
+        <form action="#" autoComplete="off" className={styles.form}>
+          <h3 className={styles.title}>Supplier Engagement</h3>
+
+          {/* Company Name */}
+          <div className={`${styles.inputContainer}`}>
+            <input
+              type="text"
+              name="companyName"
+              className={styles.input}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              required
+            />
+            <label htmlFor="companyName">Company Name</label>
+            <span>Company Name</span>
+          </div>
+
+          {/* Contact Person */}
+          <div className={`${styles.inputContainer}`}>
+            <input
+              type="text"
+              name="contactPerson"
+              className={styles.input}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              required
+            />
+            <label htmlFor="contactPerson">Contact Person</label>
+            <span>Contact Person</span>
+          </div>
+
+          {/* Phone Number */}
+          <div className={`${styles.inputContainer}`}>
+            <input
+              type="tel"
+              name="phone"
+              className={styles.input}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              required
+            />
+            <label htmlFor="phone">Phone Number</label>
+            <span>Phone Number</span>
+          </div>
+
+          {/* Email */}
+          <div className={`${styles.inputContainer}`}>
+            <input
+              type="email"
+              name="email"
+              className={styles.input}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              required
+            />
+            <label htmlFor="email">Email</label>
+            <span>Email</span>
+          </div>
+
+          {/* Message */}
+          <div className={`${styles.inputContainer} ${styles.textarea}`}>
+            <textarea
+              name="message"
+              className={styles.input}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+              required
+            ></textarea>
+            <label htmlFor="message">Message</label>
+            <span>Message</span>
+          </div>
+
+          <input type="submit" value="Send" className={styles.btn2} />
+        </form>
       </div>
-      <div className={contactStyles.inputContainer}>
-        <input
-          type="text"
-          ref={(el) => (inputsRef.current[1] = el)}
-          className={contactStyles.input}
-          required
-        />
-        <label>Supplier ID</label>
-        <span>Supplier ID</span>
-      </div>
-      <div className={`${contactStyles.inputContainer} ${contactStyles.textarea}`}>
-        <textarea
-          ref={(el) => (inputsRef.current[2] = el)}
-          className={contactStyles.input}
-          required
-        ></textarea>
-        <label>Engagement Details</label>
-        <span>Engagement Details</span>
-      </div>
-      <button className={contactStyles.btn2}>Submit</button>
     </div>
   );
 };
 
-export default SupplierEngagementForm;
+export default SupplierEngagement;
