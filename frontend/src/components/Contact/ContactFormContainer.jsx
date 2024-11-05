@@ -25,9 +25,9 @@ const ContactFormContainer = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container2">
       <img src="img/shape.png" className="square" alt="" />
-      <div className="form">
+      <div className="form2">
         <ContactInfo />
         <div className="contact-form">
           <span className="circle one"></span>
@@ -45,7 +45,6 @@ const ContactFormContainer = () => {
                 <option value="corporate">Corporate Onboarding</option>
                 <option value="feedback">Feedback</option>
               </select>
-              <span>Select Form</span>
             </div>
             {/* Render selected form */}
             {renderForm()}
