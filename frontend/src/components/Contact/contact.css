@@ -302,7 +302,7 @@ textarea.input {
 }
 
 @media (max-width: 850px) {
-  .form {
+  .form2 {
     grid-template-columns: 1fr;
   }
 
@@ -340,7 +340,7 @@ textarea.input {
 }
 
 @media (max-width: 480px) {
-  .container {
+  .container2 {
     padding: 1.5rem;
   }
 
@@ -353,7 +353,7 @@ textarea.input {
     display: none;
   }
 
-  form,
+  form2,
   .contact-info {
     padding: 1.7rem 1.6rem;
   }
